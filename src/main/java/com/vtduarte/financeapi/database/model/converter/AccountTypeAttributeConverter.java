@@ -8,13 +8,13 @@ import jakarta.persistence.Converter;
 public class AccountTypeAttributeConverter implements AttributeConverter<AccountType, Integer> {
 
     @Override
-    public Integer convertToDatabaseColumn(AccountType accountType) {
+    public Integer convertToDatabaseColumn(AccountType accountType){
         if (accountType == null) return null;
         return accountType.getValue();
     }
 
     @Override
-    public AccountType convertToEntityAttribute(Integer integer) {
+    public AccountType convertToEntityAttribute(Integer integer){
         if (integer == null) return null;
         return AccountType.fromValue(integer);
     }

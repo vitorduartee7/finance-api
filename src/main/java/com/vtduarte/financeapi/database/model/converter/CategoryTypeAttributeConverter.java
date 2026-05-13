@@ -8,13 +8,13 @@ import jakarta.persistence.Converter;
 public class CategoryTypeAttributeConverter implements AttributeConverter<CategoryType, Integer> {
 
     @Override
-    public Integer convertToDatabaseColumn(CategoryType categoryType) {
+    public Integer convertToDatabaseColumn(CategoryType categoryType){
         if (categoryType == null) return null;
         return categoryType.getValue();
     }
 
     @Override
-    public CategoryType convertToEntityAttribute(Integer integer) {
+    public CategoryType convertToEntityAttribute(Integer integer){
         if (integer == null) return null;
         return CategoryType.fromValue(integer);
     }
