@@ -37,9 +37,9 @@ public class AuthService {
 
         if (userRepository.existsByEmail(dto.email())) throw new BadRequestException("Email já cadastrado");
 
-        Roles role = rolesRepository.findByName(RoleType.USER.name())
+        Roles role = rolesRepository.findByName(RoleType.ROLE_USER.name())
                 .orElseGet(() -> rolesRepository.save(Roles.builder()
-                        .name(RoleType.USER.name())
+                        .name(RoleType.ROLE_USER.name())
                         .build()
                 ));
 

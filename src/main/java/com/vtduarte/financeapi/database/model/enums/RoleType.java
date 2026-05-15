@@ -9,8 +9,8 @@ import java.util.stream.Stream;
 @AllArgsConstructor
 public enum RoleType {
 
-    ADMIN(1, "Admin"),
-    USER(2, "User"),;
+    ROLE_ADMIN(1, "Admin"),
+    ROLE_USER(2, "User");
 
     private final Integer value;
     private final String description;
